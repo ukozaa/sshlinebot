@@ -34,8 +34,8 @@ app.post('/webhook', (req, res) => {
 function sendText(sender, text) {
   ssh
     .connect({
-      host: 'ec2-host.compute.amazonaws.com',
-      username: 'ec2-user',
+      host: '27.254.96.176',
+      username: 'kortv',
       privateKey: 'privatekey.pem'
     })
     .then((result, error) => {
@@ -55,7 +55,7 @@ function sendText(sender, text) {
           {
             headers: {
               'Content-Type': 'application/json',
-              Authorization: 'Bearer {AUTHEN KEY}'
+              Authorization: 'Bearer {nkWPtXe8RUijWUuM1GeZSFZ/JlTf8RfkGYrS3oFbvHmIzyBZrnS5sC2XYoZqwVEESVR+Hak9M4PgfKjy6uEvw4G8CAfmIwG84sO3W5cYzjdopkidTxkkrEwj2MseAxL6nftsugW7uZuNBoNa2ZDYiQdB04t89/1O/w1cDnyilFU=}'
             },
             url: 'https://api.line.me/v2/bot/message/push',
             method: 'POST',
