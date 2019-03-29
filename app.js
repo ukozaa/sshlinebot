@@ -34,7 +34,7 @@ app.post('/webhook', (req, res) => {
 function sendText(sender, text) {
   ssh
     .connect({
-      host: '27.254.96.176',
+      host: '27.254.96.176:98',
       username: 'kortv',
       privateKey: 'privatekey.pem'
     })
